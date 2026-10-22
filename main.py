@@ -67,10 +67,10 @@ def main():
     segments = response.parsed
     print(f"Gemini ({MODEL}) answered in {time.time() - start:.1f} s")
 
+
     print(f"\nSegments found: {len(segments)}")
     for i, s in enumerate(segments):
         print(f"  S{i}: ({s.x1:g}, {s.y1:g}) - ({s.x2:g}, {s.y2:g})")
-
     print("\nIntersections:")
     count = 0
     for i in range(len(segments)):
